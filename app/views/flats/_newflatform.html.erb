@@ -1,0 +1,21 @@
+<h1>Add your flat</h1>
+
+<%= simple_form_for(@flat) do |f| %>
+  <%= f.label :name, "Name of your flat" %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :address, "Address of your flat" %>
+  <%= f.text_field :address %>
+  <br>
+  <%= f.label :description, "Detailed Description" %>
+  <%= f.text_area :description %>
+  <br>
+  <%= f.label :number_of_guests, "Number of guests per night" %>
+  <%= f.input :number_of_guests %>
+  <br>
+  <%= f.label :price_per_night, "Category of your flat" %>
+  <%= f.input :price_per_night %>
+  <br>
+  <%= f.submit "Submit", disable_with: 'Submiting...' %>
+  <br>
+<% end %>

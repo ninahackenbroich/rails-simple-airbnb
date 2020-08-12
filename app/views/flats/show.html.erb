@@ -1,0 +1,21 @@
+<%= render 'navbar', flat: @flat %>
+
+<h1><%= @flat.name %></h1>
+<p><%= @flat.address %></p>
+
+<h4>A bit more about this flat...</h4>
+<p><%= @flat.description %></p>
+
+<h4>Details</h4>
+<p>
+  <ul>
+    <li>👩🏽</li>
+    <li><%= @flat.number_of_guests %></li>
+    <li>💸</li>
+    <li><%= @flat.price_per_night %></li>
+  </ul>
+</p>
+<br>
+<%= link_to "Edit", edit_flat_path %>
+<br>
+<%= link_to "Delete", flat_path, method: :delete %>
