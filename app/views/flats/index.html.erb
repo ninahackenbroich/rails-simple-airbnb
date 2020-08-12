@@ -1,0 +1,22 @@
+<h1>All our flats(<%= @flats.count %>)</h1>
+
+<div class="band">
+  <% @flats.each do |flat| %>
+    <div class="item-1">
+      <a href="" class="card">
+        <div class="thumb" style="background-image: url(https://source.unsplash.com/random/300×300);"></div>
+        <article>
+          <h1><%= flat.name %></h1>
+          <span><%= flat.description %></span>
+          <ul>
+            <li>👩🏽</li>
+            <li><%= flat.number_of_guests %></li>
+            <li>💸</li>
+            <li><%= flat.price_per_night %></li>
+          </ul>
+        </article>
+        <%= link_to "More Info", flat%>
+      </a>
+    </div>
+    <% end %>
+</div>
